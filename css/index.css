@@ -70,8 +70,13 @@ header .navbar .nav-link:hover{
     border-top: solid #ECF0F1;
     border-bottom: solid #ECF0F1;
 }
+
+.slick-prev, .slick-next{
+    top: 45% !important;
+}
+
 #slick img{
-    max-height: 350px;
+    max-height: 340px;
 }
 
 #slick .btn{
@@ -80,6 +85,10 @@ header .navbar .nav-link:hover{
 }
 
 @media screen and (max-width: 800px){
+    #slick img{
+        height: 150px;
+    }
+
     #slick .slick-arrow{
         display:none !important;
     }
@@ -99,10 +108,6 @@ header .navbar .nav-link:hover{
     display: none;
 }
 
-#competences ul{
-    display: flex;
-    list-style-type: none;
-}
 
 #competences li{
     padding-top: 15px;
