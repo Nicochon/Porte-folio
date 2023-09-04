@@ -1,0 +1,162 @@
+body{
+    background-color: #E5CDB3 ;
+    color: #2B2118;
+    font-family: "Montserrat";
+}
+.btn{
+    background-color: #2B2118;
+    color: #ECF0F1;
+}
+
+.btn:hover{
+   background-color: #6F1A07;
+    color: #ECF0F1;
+}
+
+/*header*/
+header{
+    background-color: #F7F3E3;
+}
+header .navbar .nav-link{
+    text-decoration: none;
+    color: #6F1A07;
+}
+
+header .navbar .nav-link:hover{
+    background-color: #E5CDB3;
+}
+
+/*--------------------------------*/
+
+/*banner + about*/
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*--------------------------------*/
+
+/*project*/
+#project .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#project .project {
+    width: 98%;
+    background-color: #2B2118;
+    color: #ECF0F1;
+    border-radius: 25px;
+    border: #ECF0F1 solid;
+}
+
+#project .project img{
+    border-radius: 25px
+}
+
+#project .btn{
+    background-color: #ECF0F1;
+    color: #2B2118;
+}
+
+/*--------------------------------*/
+
+/*slick*/
+#slick{
+    background-color: #2B2118;
+    color: #ECF0F1;
+    border-top: solid #ECF0F1;
+    border-bottom: solid #ECF0F1;
+}
+#slick img{
+    max-height: 350px;
+}
+
+#slick .btn{
+    background-color: #ECF0F1;
+    color: #2B2118;
+}
+
+@media screen and (max-width: 800px){
+    #slick .slick-arrow{
+        display:none !important;
+    }
+}
+
+/*--------------------------------*/
+
+/*competences*/
+
+#competences canvas{
+    border: 2px solid;
+    color: #2B2118;
+}
+
+
+#competences #canvasMobil{
+    display: none;
+}
+
+#competences ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#competences li{
+    padding-top: 15px;
+}
+
+#competences .btngame-container{
+    display:none;
+}
+
+#competences .btngame-container .btn-game .btn{
+    width: 100px;
+}
+
+@media screen and (max-width: 800px){
+    #competences .btngame-container{
+        display:block;
+    }
+}
+
+/*--------------------------------*/
+
+/*experience*/
+
+#experience .card{
+    background-color: #2B2118;
+    color: #ECF0F1;
+    min-height: 250px;
+}
+
+#experience .card-header{
+    border-bottom-color: #ECF0F1;
+}
+
+@media screen and (max-width: 760px){
+    #experience{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/*--------------------------------*/
+
+/*social*/
+
+#social{
+    background-color: #2B2118;
+    color: #ECF0F1;
+    border-top: #ECF0F1 solid;
+}
+
+#social .btn{
+    background-color: #ECF0F1;
+    color: #2B2118;
+}
+
