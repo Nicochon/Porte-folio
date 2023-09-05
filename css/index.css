@@ -99,8 +99,9 @@ header .navbar .nav-link:hover{
 /*competences*/
 
 #competences canvas{
-    border: 2px solid;
+    border: 10px solid;
     color: #2B2118;
+    background: #ECF0F1;
 }
 
 
