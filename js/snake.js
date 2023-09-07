@@ -3,6 +3,35 @@ let canvasElement = document.createElement("canvas");
 let context = canvasElement.getContext("2d");
 canvasCreation.appendChild(canvasElement);
 canvasSize();
+let score = 0
+
+const stomachPicture = document.querySelector(".stomach-snake");
+let ulElement = document.createElement("ul");
+let liElement = document.createElement("li");
+stomachPicture.appendChild(ulElement);
+ulElement.appendChild(liElement);
+
+const displayScoreElement = document.querySelector(".display-score")
+let scoreTitle = document.createElement("h2");
+scoreTitle.innerHTML = "Score :"
+displayScoreElement.appendChild(scoreTitle)
+
+document.getElementById("rejouer").addEventListener("click", function() {
+    window.location.reload();
+});
+
+const competenceHover = document.getElementById("competences")
+function handleArrowKeys(event) {
+    event.preventDefault(); // Empêche le comportement par défaut des touches fléchées
+    direction(event); // Appel de votre fonction direction
+}
+competenceHover.addEventListener("mouseenter", function(event){
+    document.addEventListener("keydown", handleArrowKeys);
+});
+
+competenceHover.addEventListener("mouseleave", function(event){
+    document.removeEventListener("keydown", handleArrowKeys);
+});
 
 let btnHigh = document.querySelector(".high");
 let btnLeft = document.querySelector(".left");
@@ -31,9 +60,8 @@ btnRight.addEventListener("click", function() {
     }
 });
 
-console.log(btnLeft)
 
-const images = [
+let images = [
     `../src/image/logo-competences/agile.png`,
     `../src/image/logo-competences/Bootstra.png`,
     `../src/image/logo-competences/css.png`,
@@ -57,7 +85,7 @@ images.forEach(url => {
     foodImage.push(image);
 });
 
-let score = 0
+
 let d
 let isPaused = false;
 let pauseTriggered = false;
@@ -79,12 +107,12 @@ let box = 0
 let snake = [];
 let food
 function mapGame (){
-    if (canvasElement.width == 1300){
-        box = 50;
-        snake [0] = {x: 13*box, y: 5*box};
+    if (canvasElement.width == 800){
+        box = 40;
+        snake [0] = {x: 10*box, y: 7*box};
         food = {
-            x: Math.floor(Math.random() * 25+1) * box,
-            y: Math.floor(Math.random() * 9+1) * box,
+            x: Math.floor(Math.random() * 19+1) * box,
+            y: Math.floor(Math.random() * 13+1) * box,
         }
     }if (canvasElement.width == 350){
         box = 25;
@@ -99,8 +127,8 @@ mapGame()
 
 function draw(){
     if (isPaused === false) {
-        if(canvasElement.width == 1300){
-            context.clearRect(0,0,1300,500)
+        if(canvasElement.width == 800){
+            context.clearRect(0,0,800,560)
         }if(canvasElement.width == 350){
             context.clearRect(0,0,350,400)
         }
@@ -134,10 +162,16 @@ function draw(){
 
         if (snakeX == food.x && snakeY == food.y){
             score++;
-            if(canvasElement.width == 1300){
+            scoreTitle.innerHTML = "Score :" + " " +score
+            if (score-1 < images.length){
+                let imageElement = document.createElement("img");
+                liElement.appendChild(imageElement);
+                imageElement.src = images[score - 1];
+            }
+            if(canvasElement.width == 800){
                 food = {
-                    x: Math.floor(Math.random() * 25 + 1) * box,
-                    y: Math.floor(Math.random() * 9 + 1) * box
+                    x: Math.floor(Math.random() * 19 + 1) * box,
+                    y: Math.floor(Math.random() * 13 + 1) * box
                 }
             }if(canvasElement.width == 350){
                 food = {
@@ -154,27 +188,37 @@ function draw(){
             x: snakeX,
             y: snakeY
         }
-        if(canvasElement.width == 1300){
-            if(snakeX < 0 || snakeY < 0 || snakeX > 26*box || snakeY > 10*box || collision(newHead, snake)){
+        if(canvasElement.width == 800){
+            if(snakeX < 0 || snakeY < 0 || snakeX > 20*box || snakeY > 14*box || collision(newHead, snake)){
                 clearInterval(game);
-                alert("perdu !")
-                window.location.reload();
+                document.getElementById("loose").style.display = "block";
+                document.getElementById("try-again").addEventListener("click", function() {
+                    window.location.reload();
+                });
+                document.getElementById("stop").addEventListener("click", function() {
+                    document.getElementById("loose").style.display = "none";
+                });
             }
         }if(canvasElement.width == 350){
             if(snakeX < 0 || snakeY < 0 || snakeX > 14*box || snakeY > 15*box || collision(newHead, snake)){
                 clearInterval(game);
-                alert("perdu !")
-                window.location.reload();
+                document.getElementById("loose").style.display = "block";
+                document.getElementById("try-again").addEventListener("click", function() {
+                    window.location.reload();
+                });
+                document.getElementById("stop").addEventListener("click", function() {
+                    document.getElementById("loose").style.display = "none";
+                });
             }
         };
 
         snake.unshift(newHead)
 
-        context.fillStyle = "#2B2118"
-        context.font = "30px arial"
-        context.fillText(score, 2*box, 1.6*box)
+        // context.fillStyle = "#2B2118"
+        // context.font = "30px arial"
+        // context.fillText(score, 2*box, 1.6*box)
 
-        if (score === 14 && !pauseTriggered) {
+        if (score === 1 && !pauseTriggered) {
             isPaused = true;
             pauseTriggered = true;
             if (isPaused == true && pauseTriggered == true){
@@ -195,9 +239,16 @@ function draw(){
     }
 }
 
+let game
+function speedlevel(){
+    if (canvasElement.width == 800){
+        game = setInterval(draw, 100)
+    }if (canvasElement.width == 350){
+        game = setInterval(draw, 150)
+    }
+};
 
-
-let game = setInterval(draw, 100)
+speedlevel();
 
 
 function collision(head, array){
@@ -211,8 +262,8 @@ function collision(head, array){
 
 function canvasSize(){
     if (window.innerWidth > 1300){
-        canvasElement.width = 1300;
-        canvasElement.height = 500;
+        canvasElement.width = 800;
+        canvasElement.height = 560;
     }if (window.innerWidth <= 1300){
         canvasElement.width = 750;
         canvasElement.height = 500;

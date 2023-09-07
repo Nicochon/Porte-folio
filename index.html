@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>Nicolas Rivier</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Nicolas Rivier développeur front-end junior sur Toulouse">
+    <meta name="keywords" content="portfolio, développement front-end, projets, créativité, CV, beau gosse">
+    <meta name="author" content="Nicolas Rivier">
+    <meta name="language" content="fr">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
-    <title>Nicolas Rivier</title>
     <link href="css/index.css" rel="stylesheet">
     <link href="css/modale.css" rel="stylesheet">
     <link rel="stylesheet"  href="node_modules/slick-carousel/slick/slick-theme.css"/>
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": [
+            "WebSite"
+        ],
+        "name": "Rivier Nicolas",
+        "image": "https://www.nicolasrivier.fr/src/image/profil.png",
+        "description": "Nicolas Rivier développeur front-end junior sur Toulouse",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Toulouse",
+            "postalCode": "31000",
+            "addressCountry": "FR"
+        }
+    }
+</script>
 <header>
     <div class="container">
         <div class= "row">
@@ -28,7 +49,7 @@
                             <a class="nav-link" href="#project">Projets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#competences">Skills</a>
+                            <a class="nav-link" href="#competences">Compétences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#experience">Formations</a>
@@ -167,7 +188,7 @@
                         <div class="photo-project text-center">
                             <img src="src/image/photo-projet/javascript-logo.png" class="img-fluid"
                                  alt="logo de javascript"
-                                width="500"
+                                 width="500"
                                  height="150">
                         </div>
                         <div class="project-description pb-4">
@@ -207,7 +228,7 @@
                             <p>La société Kasa, spécialisée dans la location d'appartements entre particuliers, possède un site vieux de plus de 10 ans. Ils souhaitent une refonte totale du site.
                             </p>
                             <p>Ici, nous avons du coder le site intégralement avec react, ainsi que respecter
-                                les maquettes qui nous ont été fournis
+                                les maquettes qui nous ont été fournies.
                             </p>
                             <a class="btn" href="https://github.com/Nicochon/project6.git" target="_blank">GitHub</a>
                         </div>
@@ -226,7 +247,7 @@
             <div class="row text-center">
                 <img src="src/image/Agile.jpg" class="img-fluid" width="1300" height="335"
                      alt="dessin representant le concepte de la méthode agile">
-                <h3>Planifier le dèveloppement d'un site</h3>
+                <h3>Planifier le développement d'un site</h3>
             </div>
             <div class="row text-center">
                 <img src="src/image/photo-projet/nina_carducci.jpg" class="img-fluid" alt="site de nina carducci "
@@ -249,79 +270,57 @@
     </div>
 </div>
 
+
 <div id="competences">
     <div class="container pt-5">
-            <h2>Mes compétences</h2>
-            <p>A vous de jouez ! Utilisez les flèches de votre clavier pour prendre le contrôle de "Snake" et
-                aidez-le à
-                manger
-            les technologies ainsi que les outils que j'ai utilisé au cours de ma formation.</p>
-        <div class="container-canvas text-center">
-        </div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <div class="row">
-                        <h2>Pause</h2>
-                        <p>Vous avez pu découvrir les technologies ainsi que les outils que j'ai utilisés jusqu'a
-                            aujourd'hui</p>
-                        <div class="row technologies">
-                            <div class="col-md-6 col-12">
-                                <h3>J'ai pu travailler avec : </h3>
-                                <div class="row ">
-                                    <div class="col-md-5 col-6">
-                                        <ul>
-                                        <li>Html</li>
-                                        <li>CSS</li>
-                                        <li>Méthode Agile</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-5 col-6">
-                                        <ul>
-                                        <li>JavaScript</li>
-                                        <li>REACT</li>
-                                        <li>EXPRESS</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <h3>Outils que j'utilise : </h3>
-                                <div class="row">
-                                        <div class="col-md-5 col-6">
-                                            <ul>
-                                            <li>GitHub</li>
-                                            <li>Git</li>
-                                            <li>MongoDB</li>
-                                            <li>Gulp</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-5 col-6">
-                                            <ul>
-                                            <li>SASS</li>
-                                            <li>NodeJS</li>
-                                            <li>API REST</li>
-                                            <li>Bootstrap</li>
-                                            </ul>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn-play">
-                            <button id="resumeButton" class="btn mt-3">Reprendre le jeu (Maj)</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h2>Mes compétences</h2>
+        <p>A vous de jouez ! Utilisez les flèches de votre clavier pour prendre le contrôle de "Snake" et
+            aidez-le à manger les technologies ainsi que les outils que j'ai utilisé au cours de ma formation.</p>
+        <div class="row ">
+            <div class="container-canvas col-md-8"></div>
             <div class="btngame-container text-center">
                 <div class="btn-game">
-                    <button class="btn high mb-4">haut</button>
+                    <button class="btn high mb-2">haut</button>
                 </div>
-                <div class="btn-game">
+                <div class="btn-game pb-3">
                     <button class="btn left">gauche</button>
                     <button  class="btn down">bas</button>
                     <button  class="btn right">droite</button>
                 </div>
             </div>
+            <div class="game-point col-md-4">
+                <div class="display-score">
+                </div>
+                <h3>technologies et outils utilisés</h3>
+                <div class = "stomach-snake pt-3"></div>
+                <div class="btn-tryagain text-center">
+                    <button id="rejouer" class="btn try-again">Rejouer</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="loose" class="modal">
+            <div class="modal-content text-center">
+                <h2>GAME OVER</h2>
+                <div class="btn-play">
+                    <button id="try-again" class="btn me-2">Try Again</button>
+                    <button id="stop" class="btn">Stop</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <h2>Gagné</h2>
+                    <h3>Vous avez pu découvrir les technologies ainsi que les outils que j'ai utilisé jusqu'a
+                        aujourd'hui</h3>
+                    <div class="btn-play">
+                        <button id="resumeButton" class="btn mt-5">continu (maj)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -355,11 +354,11 @@
                         </div>
                     </div>
                 </div>
-                <h2>Experience</h2>
+                <h2>Expérience</h2>
                 <div class="row pt-3">
                     <div class="col-md-6 d-flex justify-content-center">
                         <div class="card text-white mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Experiences</div>
+                            <div class="card-header">Expériences</div>
                             <div class="card-body">
                                 <h3 class="card-title">Reconversion</h3>
                                 <p class="card-text">Après avoir travaillé pendant 10 ans dans la restauration traditionnelle et rapide, j'ai souhaité me reconvertir dans le domaine de l'informatique. C'est pourquoi j'ai suivi une formation de développeur.
@@ -369,7 +368,7 @@
                     </div>
                     <div class="col-md-6 d-flex justify-content-center">
                         <div class="card text-white mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Éntreprise</div>
+                            <div class="card-header">Entreprise</div>
                             <div class="card-body">
                                 <h3 class="card-title">Algo-factory</h3>
                                 <p class="card-text">J'ai effectué mon alternance au sein d'une entreprise spécialisée dans le E-commerce. Au cours de celle-ci, ils m'ont formé grâce à différentes missions.</p>
@@ -394,7 +393,8 @@
                 <p>Que vous souhaitiez discuter d'une collaboration ou simplement me poser une question, n'hésitez pas à m'envoyer un email :
                 </p>
                 <a class="btn mb-5" target="_blank"
-                   href="mailto:&#110;%69&#99;o%6ca&#115;&#46;r&#105;%76ie%72&#64;&#104;%6f&#116;%6d&#97;%69l%2e%63&#111;%6d">Envoyer un email maintenant</a>
+                   href="mailto:&#110;%69c%6fl%61%73.r%69v&#105;&#101;%72&#64;h&#111;tm%61i%6c%2efr">M'envoyer un
+                    email</a>
             </div>
         </div>
     </div>
@@ -402,7 +402,8 @@
 
 
 
-<script src="js/snake.js"></script>
+<script type="module" src="js/snake.js"></script>
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

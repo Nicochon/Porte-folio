@@ -98,20 +98,33 @@ header .navbar .nav-link:hover{
 
 /*competences*/
 
+
 #competences canvas{
-    border: 10px solid;
+    border: 6px solid;
     color: #2B2118;
     background: #ECF0F1;
 }
-
 
 #competences #canvasMobil{
     display: none;
 }
 
+#competences ul{
+    display: flex;
+    list-style-type: none;
+}
+#competences ul li img {
+    width: 50px;
+    height: 50px;
+}
 
-#competences li{
-    padding-top: 15px;
+#competences .stomach-snake{
+    height: 350px;
+}
+
+#competences .try-again{
+    font-size: 30px;
+    width: 50%;
 }
 
 #competences .btngame-container{
@@ -123,10 +136,22 @@ header .navbar .nav-link:hover{
 }
 
 @media screen and (max-width: 800px){
+    #competences #canvas{
+        display: none;
+    }
+
+    #competences #canvasMobil{
+        display: block;
+    }
     #competences .btngame-container{
         display:block;
     }
+
+    #competences .stomach-snake{
+        height: auto;
+    }
 }
+
 
 /*--------------------------------*/
 
