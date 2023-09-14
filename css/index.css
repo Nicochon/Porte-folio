@@ -100,8 +100,7 @@ header .navbar .nav-link:hover{
 
 
 #competences canvas{
-    border: 6px solid;
-    color: #2B2118;
+    border: 6px solid #2B2118;
     background: #ECF0F1;
 }
 
@@ -118,9 +117,6 @@ header .navbar .nav-link:hover{
     height: 50px;
 }
 
-#competences .stomach-snake{
-    height: 350px;
-}
 
 #competences .try-again{
     font-size: 30px;

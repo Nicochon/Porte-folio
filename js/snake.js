@@ -214,13 +214,10 @@ function draw(){
 
         snake.unshift(newHead)
 
-        // context.fillStyle = "#2B2118"
-        // context.font = "30px arial"
-        // context.fillText(score, 2*box, 1.6*box)
-
-        if (score === 1 && !pauseTriggered) {
+        if (score === images.length && !pauseTriggered) {
             isPaused = true;
             pauseTriggered = true;
+            console.log(isPaused + "toto")
             if (isPaused == true && pauseTriggered == true){
                 document.getElementById("myModal").style.display = "block";
                 document.getElementById("resumeButton").addEventListener("click", function() {
